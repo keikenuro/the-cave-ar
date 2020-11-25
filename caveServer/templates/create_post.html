@@ -1,0 +1,33 @@
+{% if request.session.signature %}
+<div class="card cave-create-post">
+    <div class="card-header text-center">
+        <label class="card-title">Start a new post!</label>
+    </div>
+    <div class="card-body">
+        <form action="/v1/post" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input class="form-control" minlength="1" maxlength="250" type="text" name="title" placeholder="Post's title (max 250 chars)">
+            </div>
+            <div class="form-group">
+                <label for="content">Content</label>
+                <textarea class="form-control" minlength="1" type="text" name="content" placeholder="Write here... (max 1000 chars)" rows="5"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tag">Tag</label>
+                <select class="form-control" name="tag">
+                    <option selected disabled value="{{ default_tag }}">{{ default_tag }}</option>
+                    {% for tag in tags %}
+                        <option value="{{ tag.name }}">{{ tag.description }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="attached_img">Attached image</label>
+                <input type="file" class="form-control-file" name="attached_img">
+            </div>
+            <button type="submit" class="btn btn-primary">Post!</button>
+        </form>
+    </div>
+</div>
+{% endif %}

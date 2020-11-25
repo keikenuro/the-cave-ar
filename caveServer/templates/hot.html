@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% block title %}Hot posts NOW in The Cave/AR{% endblock %}
+{% block content %}
+    <div class="row d-flex flex-wrap justify-content-center align-content-stretch">
+        <h1 style="font-family: Baloo, sans-serif;">Find out the most popular posts right NOW!</h1>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="d-flex flex-wrap justify-content-center align-content-stretch">
+            {% for post in posts %}
+                <div class="align-self-start" style="margin: 10px">
+                    {% include "post_view.html" %}
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

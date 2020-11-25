@@ -1,0 +1,8 @@
+{
+    "short_name": "cave/ar",
+    "name": "The Cave/AR",
+    "icons": [
+    ],
+    "start_url": "/",
+    "display": "standalone"
+}
