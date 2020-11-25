@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="es-ar" manifest="static/manifest.appcache">
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge;IE=IE11;IE=10;IE=9;IE=8;">
+        <link rel="manifest" href="static/manifest.json">
+        <link rel="stylesheet" type="text/css" href="static/lib/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="static/css/base.css">
+        <link rel="stylesheet" type="text/css" href="static/lib/flag-icon-css-master/css/flag-icon.min.css">
+        <script type="text/javascript" src="static/lib/jquery.js"></script>
+        <script type="text/javascript" src="static/lib/popper.js"></script>
+        <script type="text/javascript" src="static/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        {% include "header.html" %}
+        <div class="container-fluid cave-page">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

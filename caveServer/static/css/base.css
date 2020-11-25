@@ -1,0 +1,172 @@
+@font-face {
+	font-family: 'Baloo';
+	src: url(/static/css/font/baloo.ttf);
+}
+
+@font-face {
+	font-family: 'Bowly';
+	src: url(/static/css/font/bowly.ttf);
+}
+
+body {
+	min-height: 100vh;
+	height: 100%;
+	width: 100%;
+    color: #d6d8db;
+    background: rgba(0, 0, 0, 0.9);
+    font-size: 20px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* background: url(/media/cmn/background.jpg) no-repeat center center fixed; */
+}
+
+.cave-header {
+    background: rgb(250, 0, 150);
+}
+
+.cave-header .navbar-brand {
+    font-family: 'Baloo', sans-serif;
+    font-size: 25px;
+}
+
+.cave-header .navbar-text {
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 15px;
+}
+
+.cave-header #cave-header-content .navbar-nav .nav-item .nav-link {
+    font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    font-size: 15px;
+}
+
+.cave-page {
+    margin-top: 2em;
+}
+
+.cave-welcome-card {
+    width: 80%;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.cave-welcome-card .card-title {
+    color: black;
+    font-size: 25px;
+    font-family: 'Baloo', sans-serif;
+}
+
+.cave-welcome-card .card-text {
+    font-size: 15px;
+    font-family:'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.cave-create-post {
+    color: black;
+    font-size: 15px;
+    min-width: 30%;
+    font-family:'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+.cave-create-post .card-title {
+    font-size: 25px;
+    font-family: 'Baloo', sans-serif;
+    margin-bottom: -10px;
+}
+
+.cave-create-post textarea {
+    resize: none;
+    overscroll-behavior-y: auto;
+}
+
+.cave-post {
+    color: black;
+    font-size: 15px;
+    font-family:'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+.cave-post .card-title {
+    font-size: 25px;
+    font-family: 'Baloo', sans-serif;
+}
+
+.cave-post img {
+    box-shadow: 1px 1px 10px 3px black;
+    max-width: 500px;
+    margin: auto;
+}
+
+.cave-post .card-text {
+    font-size: 15px;
+}
+
+.cave-post .text-info {
+    font-size: 10px !important;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.cave-comment {
+    font-size: 15px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.cave-comment .card-body {
+    width: 500px;
+}
+
+.cave-comment img {
+    max-width: 250px;
+    margin: auto;
+}
+
+.cave-post-preview {
+    font-size: 15px;
+    color: black;
+    height: 500px;
+}
+
+.cave-post-preview img {
+    width: 300px;
+    height: 300px;
+}
+
+.cave-post-preview .card-title {
+    font-size: 25px;
+    color: black !important;
+    font-family: Baloo, sans-serif;
+}
+
+.cave-tags {
+    font-family:'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+}
+
+.no-pointer {
+    text-decoration: none !important;
+}
+
+.cave-tags a {
+    color: white !important;
+}
+
+.cave-tags h1 {
+    font-family: 'Baloo', sans-serif;
+}
+
+.cave-tags .list-group-flush {
+    border-top: 3px solid white !important;
+}
+
+.cave-tags .list-group-item {
+    font-family: 'Baloo', sans-serif;
+    background: none !important;
+    font-size: 20px;
+}
+
+.cave-alert {
+    color: black !important;
+    background: white !important;
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 200px;
+    z-index: 1000000000000000000;
+}

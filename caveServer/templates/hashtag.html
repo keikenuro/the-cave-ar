@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block title %}Posts for hashtag {{ hashtag.name }}{% endblock %}
+{% block content %}
+    <script src="static/lib/waypoints/lib/jquery.waypoints.min.js"></script>
+    <script src="static/lib/waypoints/lib/shortcuts/infinite.min.js"></script>
+    <div class="row d-flex flex-column justify-content-center align-items-center cave-tags">
+        <h1>Posts for hashtag #{{ hashtag.name }}</h1>
+    </div>
+    <div class="row" style="margin-top: 10px">
+        <div class="infinite-container d-flex flex-wrap justify-content-center align-content-stretch">
+            {% for post in posts %}
+                <div class="infinite-item align-self-start" style="margin: 10px">
+                    {% include "post_view.html" %}
+                </div>
+            {% endfor %}
+        </div>
+        {% if posts.has_next %}
+            <a class="infinite-more-link" href="{{ request.path }}?page={{ posts.next_page_number }}"></a>
+            <div class="d-flex justify-content-center" style="display:none;">
+                <div class="spinner-border" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    <script>
+        let infinite = new Waypoint.Infinite({
+            element: $('.infinite-container')[0],
+            handler: function(direction) {
+            },
+            offset: 'bottom-in-view',
+            onBeforePageLoad: function () {
+                $('.spinner-border').show();
+            },
+            onAfterPageLoad: function () {
+                $('.spinner-border').hide();
+            }
+        });
+    </script>
+{% endblock %}
